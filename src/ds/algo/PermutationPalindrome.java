@@ -1,3 +1,5 @@
+// This is the first solution according to CrTCI book.
+
 package ds.algo;
 
 public class PermutationPalindrome {
