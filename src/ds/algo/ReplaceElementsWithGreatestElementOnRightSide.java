@@ -27,11 +27,33 @@ public class ReplaceElementsWithGreatestElementOnRightSide {
 		return arr;
 
 	}
+	
+	public static int[] replaceElements2(int[] arr) {
+		
+//		second solution, better that first one
+		
+		if(arr.length==1) {
+			return new int[] {-1};
+		}
+		int max=-1;
+		int temp;
+		for(int i=arr.length-1; i>=0; i--) {
+			temp = arr[i];
+			arr[i] = max;
+			if(temp>max) {
+				max=temp;
+			}
+		}
+		
+		return arr;
+	}
+	
+	
 
 	public static void main(String[] args) {
 		
-		int[] arr = {400};
-		System.out.println(Arrays.toString(replaceElements(arr)));
+		int[] arr = {17,18,5,4,6,1};
+		System.out.println(Arrays.toString(replaceElements2(arr)));
 	}
 
 }
