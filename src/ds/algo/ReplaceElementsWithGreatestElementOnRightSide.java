@@ -30,7 +30,7 @@ public class ReplaceElementsWithGreatestElementOnRightSide {
 	
 	public static int[] replaceElements2(int[] arr) {
 		
-//		second solution, better that first one
+//		feasible solution using single loop, better that first one
 		
 		if(arr.length==1) {
 			return new int[] {-1};
