@@ -24,10 +24,34 @@ public class FindDisappearedNumbers {
 		
 		return resultList;
 	}
+	
+	public static List<Integer> findDisappearedNumbersOptimized(int[] nums) {
+		List<Integer> resultList = new ArrayList<Integer>();
+		
+		int n = nums.length;
+		
+		boolean[] present = new boolean[n];
+		
+		for(int i=0; i<nums.length; i++) {
+			present[nums[i]-1]=true;
+		}	
+		
+		for(int i=0; i<n; i++) {
+			if(!present[i]) {
+				resultList.add(i+1);
+			}
+		}
+		
+		return resultList;
+		
+	}
 
 	public static void main(String[] args) {
 		int arr[] = {4,3,2,7,8,2,3,1};
-		System.out.println(findDisappearedNumbers(arr));
+		int arr2[] = {1,1};
+		System.out.println(findDisappearedNumbersOptimized(arr));
+		System.out.println(findDisappearedNumbersOptimized(arr2));
+		System.out.println(findDisappearedNumbers(arr2));
 	}
 
 }
