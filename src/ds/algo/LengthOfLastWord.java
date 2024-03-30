@@ -28,11 +28,18 @@ public class LengthOfLastWord {
 		
 		return length;
 	}
+	
+	public static int lengthOfLastWord3(String s) {
+//		s=s.trim();
+//		Beats 100.00% of users with Java
+		String[] str = s.split(" ");
+		return str[str.length-1].length();
+	}
 
 	public static void main(String[] args) {
 		String str = "luffy is still joyboy";
 		System.out.println(str.substring(4));
-		System.out.println(lengthOfLastWord2(str));
+		System.out.println(lengthOfLastWord3(str));
 	}
 
 }
